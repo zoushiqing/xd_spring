@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean name="video" class="net.xdclass.sp.domain.Video"
+          scope="singleton">
+        <property name="id" value="23"/>
+        <property name="title" value="tom"/>
+    </bean>
+    <bean id="videoOrder" class="net.xdclass.sp.domain.VideoOrder">
+        <property name="id" value="8"/>
+        <property name="outTradeNo" value="fasdf234afsdfffasdfa"/>
+        <property name="video" ref="video"/>
+    </bean>
+</beans>
